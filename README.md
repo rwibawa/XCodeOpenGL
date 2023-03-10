@@ -27,6 +27,57 @@ $ brew install glfw
 ```
 
 ### 3. Add **GLFW** header files to the project include path.
-Go to project *Build Settings*, search for "header search", *double-click* on **Header Search Paths**. Add "/usr/local/Cellar/glfw/3.3.5/include".
-![GLFW include path](./docs/img/xcode-project-options.jpg)
+Go to project *Build Settings* tab, search for "header search", *double-click* on **Header Search Paths**. Add "/usr/local/Cellar/glfw/3.3.5/include".
+![GLFW include path](./docs/img/xcode-project-build-settings.jpg)
 
+### 4. Add the *libs*.
+Go to project *Build Phase* tab > Link Binary With Libraries
+![Link Binaries](./docs/img/xcode-project-build-phase.jpg)
+
+1. Add **OpenGL.framework**.
+2. Add *glfw lib* by clicking the `Add Other...` button. Go to `/usr/local/Cellar/glfw/3.3.5/lib/` path. Select the *lib* binary.
+   ![Link Binaries](./docs/img/xcode-project-build-phase.jpg)
+   
+   ## Hello World window.
+   Go to [GLFW Documentation](https://www.glfw.org/documentation.html) and copy the *Hello World* code. Put it in `Main.cpp`:
+   ```cpp
+   #include <GLFW/glfw3.h>
+   
+   int main(void)
+   {
+       GLFWwindow* window;
+       
+       /* Initialize the library */
+       if (!glfwInit())
+           return -1;
+       
+       /* Create a windowed mode window and its OpenGL context */
+       window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
+       if (!window)
+       {
+           glfwTerminate();
+           return -1;
+       }
+       
+       /* Make the window's context current */
+       glfwMakeContextCurrent(window);
+       
+       /* Loop until the user closes the window */
+       while (!glfwWindowShouldClose(window))
+       {
+           /* Render here */
+           glClear(GL_COLOR_BUFFER_BIT);
+           
+           /* Swap front and back buffers */
+           glfwSwapBuffers(window);
+           
+           /* Poll for and process events */
+           glfwPollEvents();
+       }
+       
+       glfwTerminate();
+       return 0;
+   }
+   ```
+
+Run the build with `⌘B`.
