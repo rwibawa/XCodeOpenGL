@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		94E3650729BBC6D1005BDCD1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 94E3650629BBC6D1005BDCD1 /* main.cpp */; };
+		94E3650F29BBC710005BDCD1 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E3650E29BBC710005BDCD1 /* OpenGL.framework */; };
+		94E3651129BBC73B005BDCD1 /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E3651029BBC73B005BDCD1 /* libglfw.3.3.dylib */; };
+		94E3651529BBCD48005BDCD1 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 94E3651429BBCD48005BDCD1 /* glad.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,9 @@
 /* Begin PBXFileReference section */
 		94E3650329BBC6D1005BDCD1 /* XCodeOpenGL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = XCodeOpenGL; sourceTree = BUILT_PRODUCTS_DIR; };
 		94E3650629BBC6D1005BDCD1 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		94E3650E29BBC710005BDCD1 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		94E3651029BBC73B005BDCD1 /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../../../usr/local/Cellar/glfw/3.3.5/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
+		94E3651429BBCD48005BDCD1 /* glad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glad.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +38,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94E3651129BBC73B005BDCD1 /* libglfw.3.3.dylib in Frameworks */,
+				94E3650F29BBC710005BDCD1 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +51,7 @@
 			children = (
 				94E3650529BBC6D1005BDCD1 /* XCodeOpenGL */,
 				94E3650429BBC6D1005BDCD1 /* Products */,
+				94E3650D29BBC710005BDCD1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +66,19 @@
 		94E3650529BBC6D1005BDCD1 /* XCodeOpenGL */ = {
 			isa = PBXGroup;
 			children = (
+				94E3651429BBCD48005BDCD1 /* glad.c */,
 				94E3650629BBC6D1005BDCD1 /* main.cpp */,
 			);
 			path = XCodeOpenGL;
+			sourceTree = "<group>";
+		};
+		94E3650D29BBC710005BDCD1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				94E3651029BBC73B005BDCD1 /* libglfw.3.3.dylib */,
+				94E3650E29BBC710005BDCD1 /* OpenGL.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94E3650729BBC6D1005BDCD1 /* main.cpp in Sources */,
+				94E3651529BBCD48005BDCD1 /* glad.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +253,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/glfw/3.3.5/include,
+					/Users/ryan/Documents/workspace_opengl/XCodeOpenGL/Libraries/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glfw/3.3.5/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -241,6 +269,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/glfw/3.3.5/include,
+					/Users/ryan/Documents/workspace_opengl/XCodeOpenGL/Libraries/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glfw/3.3.5/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
