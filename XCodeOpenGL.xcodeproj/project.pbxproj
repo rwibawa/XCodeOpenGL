@@ -26,6 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9424F19C29BC3470002D9A95 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		94E3650329BBC6D1005BDCD1 /* XCodeOpenGL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = XCodeOpenGL; sourceTree = BUILT_PRODUCTS_DIR; };
 		94E3650629BBC6D1005BDCD1 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		94E3650E29BBC710005BDCD1 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -49,6 +50,7 @@
 		94E364FA29BBC6D1005BDCD1 = {
 			isa = PBXGroup;
 			children = (
+				9424F19C29BC3470002D9A95 /* README.md */,
 				94E3650529BBC6D1005BDCD1 /* XCodeOpenGL */,
 				94E3650429BBC6D1005BDCD1 /* Products */,
 				94E3650D29BBC710005BDCD1 /* Frameworks */,

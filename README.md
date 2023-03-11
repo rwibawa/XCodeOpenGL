@@ -3,7 +3,9 @@ Learn OpenGL on XCode.
 
 ## References
 * [Hello World Tutorial](https://youtu.be/MHlbNbWlrIM)
+
 * [FreeCodeCamp Tutorial](https://youtu.be/45MIykWJ-C4)
+* [OpenGL Tutorial github repo](https://github.com/VictorGordan/opengl-tutorials)
 
 * [GLFW](https://www.glfw.org/)
 * [GLFW github repo](https://github.com/glfw/glfw)
