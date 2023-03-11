@@ -99,6 +99,6 @@ Download the package, then extract it.
 
 ### 4. Copy the `glad.c` in the glad *src* folder, and drop it in the project:
 ![glad.c](./docs/img/glad-gladc.jpg)
-
+![add glad.c](./docs/img/xcode-drop-gladc.jpg)
 
 Write the code that calls `gladLoadGL()`, then run the build with `⌘B`.
