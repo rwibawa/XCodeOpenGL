@@ -36,7 +36,7 @@ Go to project *Build Phase* tab > Link Binary With Libraries
 
 1. Add **OpenGL.framework**.
 2. Add *glfw lib* by clicking the `Add Other...` button. Go to `/usr/local/Cellar/glfw/3.3.5/lib/` path. Select the *lib* binary.
-   ![Link Binaries](./docs/img/xcode-project-build-phase.jpg)
+   ![Add Other...](./docs/img/xcode-project-build-phase-add-other.jpg)
    
    ## Hello World window.
    Go to [GLFW Documentation](https://www.glfw.org/documentation.html) and copy the *Hello World* code. Put it in `Main.cpp`:
@@ -81,3 +81,24 @@ Go to project *Build Phase* tab > Link Binary With Libraries
    ```
 
 Run the build with `⌘B`.
+
+## Add **glad**, a GL loader.
+### 1. Go to [glad](https://glad.dav1d.de/), select the options below and generate the loader:
+* gl: *Version 3.3*
+* profile: *Compatibility*
+
+![glad-generator](./docs/img/glad-generator.jpg)
+
+Download the package, then extract it.
+
+### 2. Create `Libraries` folder in the project folder. Then create `include` folder and `lib` folder inside it:
+![Libraries folder](./docs/img/Libraries-folder.jpg)
+
+### 3. Copy all contents in glad *include* folder, and put them in the `XCodeOpenGL/Libraries/include` folder.
+![glad include](./docs/img/glad-include.jpg)
+
+### 4. Copy the `glad.c` in the glad *src* folder, and drop it in the project:
+![glad.c](./docs/img/glad-gladc.jpg)
+
+
+Write the code that calls `gladLoadGL()`, then run the build with `⌘B`.
